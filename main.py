@@ -1,8 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from bs4 import BeautifulSoup
-from pyrogram.types import ChatPermissions
 
 from dotenv import load_dotenv
 import os
@@ -28,7 +26,7 @@ app = Client(
 @app.on_message(filters.command("voice", prefixes=".") & filters.me)
 async def send_voice(_, message):
 
-    audio_path = "brainrot_reference.ogg"
+    audio_path = "test_content/brainrot_reference.ogg"
     await app.send_voice(
         chat_id=message.chat.id,
         voice=audio_path,
@@ -37,7 +35,7 @@ async def send_voice(_, message):
 
 @app.on_message(filters.command("circle", prefixes=".") & filters.me)
 async def send_circle(_, message: Message):
-    video_path = "final_video_with_subtitles.mp4"  # уже сконвертированное квадратное видео
+    video_path = "test_content/final_video_with_subtitles.mp4"  # уже сконвертированное квадратное видео
     try:
         with open(video_path, "rb") as f:
             await app.send_video_note(
