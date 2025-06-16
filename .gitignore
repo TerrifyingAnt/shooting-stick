@@ -1,0 +1,5 @@
+.venv
+test_content
+my_account.session
+my_account.session-journal
+.env
