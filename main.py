@@ -26,7 +26,7 @@ app = Client(
 @app.on_message(filters.command("voice", prefixes=".") & filters.me)
 async def send_voice(_, message):
 
-    audio_path = "test_content/brainrot_reference.ogg"
+    audio_path = "voice_module/output/brainrot.ogg"
     await app.send_voice(
         chat_id=message.chat.id,
         voice=audio_path,

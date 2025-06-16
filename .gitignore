@@ -3,3 +3,6 @@ test_content
 my_account.session
 my_account.session-journal
 .env
+voice_module/reference
+voice_module/output
+voice_module/model
